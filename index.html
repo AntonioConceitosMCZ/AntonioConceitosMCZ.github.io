@@ -22,16 +22,18 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* Contêiner principal do convite */
-        .convite-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px; /* Largura ideal para telas de celular */
-            aspect-ratio: 1 / 2; /* Mantém a proporção vertical da imagem */
-            background-image: url('img.png'); /* IMPORTANTE: Substitua pelo nome correto do seu arquivo de imagem */
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+        /* Contêiner principal do convite atualizado para 1158 x 1378 */
+.convite-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Mantém uma largura excelente para celulares */
+    aspect-ratio: 1158 / 1378; /* Proporção exata da sua imagem */
+    background-image: url('seu-convite.png'); /* Nome do seu arquivo */
+    background-size: contain; /* Garante que a imagem apareça 100% sem cortes */
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+}
         }
 
         /* Área onde os botões vão ficar posicionados (Linha vermelha da sua imagem) */
