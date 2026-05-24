@@ -1,3 +1,109 @@
-<html>
-  <head>teste</head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite 50 Anos - Tony</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b1a30; /* Fundo azul escuro combinando com o convite */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Contêiner principal do convite */
+        .convite-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px; /* Largura ideal para telas de celular */
+            aspect-ratio: 1 / 2; /* Mantém a proporção vertical da imagem */
+            background-image: url('seu-convite.png'); /* IMPORTANTE: Substitua pelo nome correto do seu arquivo de imagem */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Área onde os botões vão ficar posicionados (Linha vermelha da sua imagem) */
+        .botoes-container {
+            position: absolute;
+            bottom: 12%; /* Ajuste essa porcentagem para subir ou descer os botões */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* Estilização dos botões interativos */
+        .btn-interativo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #e5c158; /* Tom de dourado combinando com o convite */
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s ease;
+            text-align: center;
+            width: 30%;
+        }
+
+        .btn-interativo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Ícone redondo */
+        .btn-interativo .icone {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #e5c158;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            margin-bottom: 6px;
+            background-color: rgba(11, 26, 48, 0.8); /* Fundo semi-transparente */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="convite-container">
+        
+        <div class="botoes-container">
+            
+            <a href="https://wa.me/SEUNUMERO" target="_blank" class="btn-interativo">
+                <div class="icone"><i class="fa-solid fa-user-check"></i></div>
+                <span>Confirmar Presença</span>
+            </a>
+
+            <a href="https://maps.google.com" target="_blank" class="btn-interativo">
+                <div class="icone"><i class="fa-solid fa-location-dot"></i></div>
+                <span>Como Chegar</span>
+            </a>
+
+            <a href="sua-lista-ou-pix.html" class="btn-interativo">
+                <div class="icone"><i class="fa-solid fa-gift"></i></div>
+                <span>Sugestão de Presente</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
 </html>
