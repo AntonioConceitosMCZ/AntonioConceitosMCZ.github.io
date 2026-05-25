@@ -36,50 +36,52 @@
 }
         }
 
-        /* Área onde os botões vão ficar posicionados (Linha vermelha da sua imagem) */
-        .botoes-container {
-            position: absolute;
-            bottom: 12%; /* Ajuste essa porcentagem para subir ou descer os botões */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 85%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
+       /* Área onde os botões vão ficar posicionados (Corrigido para horizontal na parte inferior) */
+.botoes-container {
+    position: absolute;
+    bottom: 6%; /* Distância da borda inferior. Ajuste se precisar subir ou descer tudo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Ocupa quase toda a largura do convite para espalhar os botões */
+    display: flex;
+    flex-direction: row; /* Força os botões a ficarem um ao lado do outro */
+    justify-content: space-around; /* Distribui o espaço igualmente entre os 3 botões */
+    align-items: center;
+    z-index: 10; /* Garante que fiquem por cima de qualquer elemento */
+}
 
-        /* Estilização dos botões interativos */
-        .btn-interativo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #e5c158; /* Tom de dourado combinando com o convite */
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: transform 0.2s ease;
-            text-align: center;
-            width: 30%;
-        }
+/* Estilização dos botões interativos */
+.btn-interativo {
+    display: flex;
+    flex-direction: column; /* Ícone em cima, texto embaixo */
+    align-items: center;
+    text-decoration: none;
+    color: #e5c158; /* Dourado */
+    font-size: 10px; /* Tamanho do texto ajustado para caber em telas menores */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+    text-align: center;
+    width: 30%; /* Cada botão consome cerca de 1/3 do espaço horizontal */
+}
 
-        .btn-interativo:hover {
-            transform: scale(1.1);
-        }
+.btn-interativo:hover {
+    transform: scale(1.1);
+}
 
-        /* Ícone redondo */
-        .btn-interativo .icone {
-            width: 50px;
-            height: 50px;
-            border: 2px solid #e5c158;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            margin-bottom: 6px;
-            background-color: rgba(11, 26, 48, 0.8); /* Fundo semi-transparente */
-        }
+/* Ícone redondo */
+.btn-interativo .icone {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #e5c158;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 6px;
+    background-color: rgba(11, 26, 48, 0.9); /* Fundo escuro para dar contraste sobre o balão */
+}
     </style>
 </head>
 <body>
