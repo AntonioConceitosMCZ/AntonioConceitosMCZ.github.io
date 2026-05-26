@@ -1,1 +1,95 @@
+<style>
+    /* Reset básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    body {
+        background-color: #0b1a30; /* Fundo azul escuro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: 'Arial', sans-serif;
+        padding: 15px;
+    }
+
+    /* Contêiner que envolve o convite e os botões */
+    .wrapper-convite {
+        width: 100%;
+        max-width: 420px; /* Reduzido levemente para melhor encaixe */
+        max-height: 90vh; /* Impede que o bloco estique demais para baixo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Contêiner principal da imagem */
+    .convite-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1158 / 1378; /* Proporção exata da imagem */
+        background-image: url('img.png'); /* Nome do seu arquivo */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+        border-radius: 8px;
+    }
+
+    /* Área dos botões - Ajustado o espaçamento */
+    .botoes-container {
+        width: 100%; 
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around; 
+        align-items: flex-start;
+        margin-top: 15px; /* Espaço controlado entre a imagem e os botões */
+        z-index: 10;
+    }
+
+    /* Estilização dos botões interativos */
+    .btn-interativo {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-decoration: none;
+        color: #e5c158; /* Dourado */
+        font-size: 10px; /* Fonte compacta para telas menores */
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: transform 0.2s ease;
+        text-align: center;
+        width: 32%; 
+    }
+
+    .btn-interativo:hover {
+        transform: scale(1.05);
+    }
+
+    /* Texto do botão - Impede que quebre no meio da palavra */
+    .btn-interativo span {
+        white-space: normal; /* Permite quebrar linha se necessário, mas com ordem */
+        display: block;
+        margin-top: 4px;
+        line-height: 1.2;
+    }
+
+    /* Ícone redondo */
+    .btn-interativo .icone {
+        width: 46px;
+        height: 46px;
+        border: 2px solid #e5c158;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background-color: rgba(11, 26, 48, 0.9);
+        color: #e5c158;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+</style>
