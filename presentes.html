@@ -6,7 +6,7 @@
     <title>Sugestões de Presentes - Tony 50 Anos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Mantendo a base do convite principal */
+        /* Mantendo a base visual do convite principal */
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +30,7 @@
             border-radius: 15px;
             width: 100%;
             max-width: 450px;
-            padding: 30px 20px;
+            padding: 35px 25px;
             box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.6);
             text-align: center;
             color: #ffffff;
@@ -38,7 +38,7 @@
 
         /* Ícone de cabeçalho */
         .topo-icone {
-            font-size: 40px;
+            font-size: 42px;
             color: #e5c158;
             margin-bottom: 15px;
         }
@@ -48,93 +48,74 @@
             font-size: 22px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         p.subtitulo {
             font-size: 14px;
             color: #a4b3c6;
             margin-bottom: 25px;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
-        /* Seções de Opções */
+        /* Seção das Informações de Tamanho */
         .opcao-bloco {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(229, 193, 88, 0.3);
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
             text-align: left;
         }
 
         .opcao-bloco h2 {
             color: #e5c158;
-            font-size: 14px;
+            font-size: 15px;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .opcao-bloco p {
-            font-size: 14px;
-            color: #e2e8f0;
-            line-height: 1.5;
-        }
-
-        /* Estilização do botão Pix / Links */
-        .btn-link {
-            display: flex;
-            justify-content: center;
             align-items: center;
             gap: 10px;
-            background-color: transparent;
-            border: 2px solid #e5c158;
-            color: #e5c158;
-            padding: 10px 15px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 13px;
-            text-transform: uppercase;
-            margin-top: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            width: 100%;
         }
 
-        .btn-link:hover {
-            background-color: #e5c158;
-            color: #0b1a30;
-        }
-
-        /* Informações extras (Tamanhos) */
+        /* Grid para organizar as informações */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 5px;
+            gap: 12px;
         }
 
         .info-item {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 8px;
-            border-radius: 5px;
-            font-size: 13px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #e5c158;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .info-item strong {
+            color: #a4b3c6;
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .info-item span {
+            color: #ffffff;
+            font-weight: bold;
         }
 
         /* Botão Voltar */
         .btn-voltar {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: #a4b3c6;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 13px;
             text-transform: uppercase;
-            margin-top: 15px;
+            letter-spacing: 0.5px;
             transition: color 0.2s;
         }
 
@@ -152,58 +133,39 @@
         </div>
         
         <h1>Sugestões de Presentes</h1>
-        <p class="subtitulo">Sua presença é o maior presente! Mas caso queira nos mimar, aqui estão algumas sugestões:</p>
+        <p class="subtitulo">Caso queira presentear o Tony, preparamos uma lista com os tamanhos e preferências para te guiar:</p>
 
-        <!-- OPÇÃO 1: PIX (Muito comum hoje em dia) -->
+        <!-- Bloco de Tamanhos e Medidas -->
         <div class="opcao-bloco">
-            <h2><i class="fa-solid fa-qrcode"></i> Opção 1: Pix (Operação Grinalda/Viagem)</h2>
-            <p>Se preferir contribuir com a nossa caixinha de comemoração ou futura viagem:</p>
-            <!-- Substitua o 'suachave@email.com' pela sua chave real -->
-            <button class="btn-link" onclick="copiarPix('suachave@email.com')">
-                <i class="fa-regular fa-copy"></i> Copiar Chave Pix
-            </button>
-        </div>
-
-        <!-- OPÇÃO 2: LISTA ONLINE (Se houver site como QueroDeCasamento, Magalu, etc.) -->
-        <div class="opcao-bloco">
-            <h2><i class="fa-solid fa-basket-shopping"></i> Opção 2: Lista Online</h2>
-            <p>Criamos uma lista de sugestões com entrega direto na nossa casa.</p>
-            <!-- Substitua o '#' pelo link real da lista se houver -->
-            <a href="#" target="_blank" class="btn-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visualizar Lista
-            </a>
-        </div>
-
-        <!-- OPÇÃO 3: TAMANHOS (Ótimo para roupas e calçados) -->
-        <div class="opcao-bloco">
-            <h2><i class="fa-solid fa-shirt"></i> Opção 3: Roupas e Calçados</h2>
-            <p>Caso sua opção seja vestuário, aqui estão as medidas do Tony:</p>
+            <h2><i class="fa-solid fa-shirt"></i> Tamanhos e Preferências</h2>
+            
             <div class="info-grid">
-                <div class="info-item"><strong>Camisa:</strong> G / 42</div>
-                <div class="info-item"><strong>Calça:</strong> 42</div>
-                <div class="info-item"><strong>Calçado:</strong> 41</div>
-                <div class="info-item"><strong>Estilo:</strong> Esporte Fino</div>
+                <div class="info-item">
+                    <strong>Camisa / Polo</strong>
+                    <span>G / 42</span>
+                </div>
+                <div class="info-item">
+                    <strong>Calça / Bermuda</strong>
+                    <span>42</span>
+                </div>
+                <div class="info-item">
+                    <strong>Calçado</strong>
+                    <span>41</span>
+                </div>
+                <div class="info-item">
+                    <strong>Estilo</strong>
+                    <span>Esporte Fino</span>
+                </div>
             </div>
         </div>
 
-        <!-- Link para voltar ao convite principal -->
-        <!-- Substitua o 'index.html' pelo nome do arquivo do seu convite se for diferente -->
+        <!-- Link para retornar ao convite -->
+        <!-- Lembre-se de ajustar 'index.html' se o arquivo do seu convite principal tiver outro nome -->
         <a href="index.html" class="btn-voltar">
             <i class="fa-solid fa-chevron-left"></i> Voltar ao Convite
         </a>
 
     </div>
-
-    <script>
-        // Função simples para copiar a chave Pix automaticamente
-        function copiarPix(chave) {
-            navigator.clipboard.writeText(chave).then(() => {
-                alert("Chave Pix copiada com sucesso!");
-            }).catch(err => {
-                alert("Erro ao copiar. Chave: " + chave);
-            });
-        }
-    </script>
 
 </body>
 </html>
